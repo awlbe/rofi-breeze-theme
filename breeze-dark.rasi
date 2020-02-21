@@ -5,37 +5,35 @@
  */
 
 * {
-    /* --- */
-    background: rgb(50, 53, 56);
-    foreground: rgb(239, 240, 241);
+    /* Base */
+    default-background: rgba(49, 52, 56, 100%); // <- change this for transparency
+    default-foreground: rgba(239, 240, 241, 100%);
+    default-border: rgba(97, 101, 105, 100%);
+    alternative-background: rgba(35, 38, 41, 100%);
+    invisible: rgba(0, 0, 0, 0%);
 
-    /* --- */
-    urgent-background: rgb(77, 31, 37);
-    urgent-border: rgb(218, 64, 64);
+    /* Colors */
+    hard-blue: rgba(42, 139, 218, 100%);
+    light-blue: rgba(24, 53, 69, 100%);
 
-    active-background: rgb(19, 55, 35);
-    active-border: rgb(39, 145, 66);
+    hard-red: rgba(141, 58, 80, 100%);
+    light-red: rgba(77, 31, 37, 100%);
 
-    selected-background: rgb(52, 87, 107);
-    selected-border: rgb(61, 173, 231);
+    hard-green: rgba(39, 161, 69, 100%);
+    light-green: rgba(19, 55, 35, 100%);
 
-    normal-background: rgb(246, 246, 247);
-    normal-border: rgb(97, 101, 105);
-
-    entry-background: rgb(35, 38, 41);
-
-    /* --- */
-    background-color: @background;
-    text-color: @foreground;
+    /* Universal */
+    background-color: @invisible;
+    border-color: @default-border;
     font: "Noto Sans 10";
-    border-color: @normal-border;
+    text-color: @default-foreground;
 }
 
 #window {
-    background-color: @background;
+    background-color: @default-background;
     border: 1;
     border-radius: 3;
-    border-color: @normal-border;
+    border-color: @default-border;
     padding: 7;
 }
 
@@ -48,7 +46,7 @@
     border: 1;
     border-radius: 3;
     padding: 5;
-    background-color: @entry-background;
+    background-color: @alternative-background;
 }
 
 #textbox {
@@ -66,34 +64,34 @@
     padding: 5;
     border: 1;
     border-radius: 3;
-    border-color: @background;
+    border-color: @invisible;
 }
 
 #element.normal.normal {
-    background-color: @background;
+    background-color: @invisible;
 }
 
 #element.normal.urgent {
-    background-color: @urgent-background;
+    background-color: @light-red;
 }
 
 #element.normal.active {
-    background-color: @active-background;
+    background-color: @light-green;
 }
 
 #element.selected.normal {
-    background-color:   @selected-background;
-    border-color:       @selected-border;
+    background-color: @light-blue;
+    border-color:     @hard-blue;
 }
 
 #element.selected.urgent {
-    background-color: @urgent-background;
-    border-color: @urgent-border;
+    background-color: @light-red;
+    border-color:     @hard-red;
 }
 
 #element.selected.active {
-    background-color: @active-background;
-    border-color: @active-border;
+    background-color: @light-green;
+    border-color:     @hard-green;
 }
 
 #mode-switcher {
@@ -102,31 +100,29 @@
 
 #button {
     border: 0 0 3 0;
+    border-color: @invisible;
     padding: 3;
-    border-color: @background;
 }
 
 #button.selected {
-    border-color: @selected-border;
+    border-color: @hard-blue;
 }
 
 #inputbar {
-    spacing:    0;
-    text-color: @foreground;
-    padding:    1;
+    spacing: 0;
+    padding: 1;
 }
 
 #case-indicator {
     spacing: 0;
     padding: 3px;
-    background-color: @entry-background;
+    background-color: @alternative-background;
     border: 1 1 1 0;
     border-radius: 0 2 2 0;
 }
 
 #entry {
-    text-color: @foreground;
-    background-color: @entry-background;
+    background-color: @alternative-background;
     padding: 3px;
     border: 1 0 1 1;
     border-radius: 2 0 0 2;
@@ -134,5 +130,4 @@
 
 #prompt {
     padding: 3 7 3 0;
-    text-color: @foreground;
 }
