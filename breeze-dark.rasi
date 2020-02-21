@@ -1,0 +1,138 @@
+/*
+ * breeze-dark.rasi
+ * rofi theme inspired by plasma breeze
+ * MonsieurBedard
+ */
+
+* {
+    /* --- */
+    background: rgb(50, 53, 56);
+    foreground: rgb(239, 240, 241);
+
+    /* --- */
+    urgent-background: rgb(77, 31, 37);
+    urgent-border: rgb(218, 64, 64);
+
+    active-background: rgb(19, 55, 35);
+    active-border: rgb(39, 145, 66);
+
+    selected-background: rgb(52, 87, 107);
+    selected-border: rgb(61, 173, 231);
+
+    normal-background: rgb(246, 246, 247);
+    normal-border: rgb(97, 101, 105);
+
+    entry-background: rgb(35, 38, 41);
+
+    /* --- */
+    background-color: @background;
+    text-color: @foreground;
+    font: "Noto Sans 10";
+    border-color: @normal-border;
+}
+
+#window {
+    background-color: @background;
+    border: 1;
+    border-radius: 3;
+    border-color: @normal-border;
+    padding: 7;
+}
+
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+
+#message {
+    border: 1;
+    border-radius: 3;
+    padding: 5;
+    background-color: @entry-background;
+}
+
+#textbox {
+    background-color: @entry-background;
+}
+
+#listview {
+    fixed-height: 0;
+    spacing: 2;
+    scrollbar: false;
+    padding: 2 0 0;
+}
+
+#element {
+    padding: 5;
+    border: 1;
+    border-radius: 3;
+    border-color: @background;
+}
+
+#element.normal.normal {
+    background-color: @background;
+}
+
+#element.normal.urgent {
+    background-color: @urgent-background;
+}
+
+#element.normal.active {
+    background-color: @active-background;
+}
+
+#element.selected.normal {
+    background-color:   @selected-background;
+    border-color:       @selected-border;
+}
+
+#element.selected.urgent {
+    background-color: @urgent-background;
+    border-color: @urgent-border;
+}
+
+#element.selected.active {
+    background-color: @active-background;
+    border-color: @active-border;
+}
+
+#mode-switcher {
+    spacing: 0;
+}
+
+#button {
+    border: 0 0 3 0;
+    padding: 3;
+    border-color: @background;
+}
+
+#button.selected {
+    border-color: @selected-border;
+}
+
+#inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1;
+}
+
+#case-indicator {
+    spacing: 0;
+    padding: 3px;
+    background-color: @entry-background;
+    border: 1 1 1 0;
+    border-radius: 0 2 2 0;
+}
+
+#entry {
+    text-color: @foreground;
+    background-color: @entry-background;
+    padding: 3px;
+    border: 1 0 1 1;
+    border-radius: 2 0 0 2;
+}
+
+#prompt {
+    padding: 3 7 3 0;
+    text-color: @foreground;
+}
