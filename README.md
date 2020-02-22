@@ -6,3 +6,6 @@ A rofi theme inspired by breeze from kde plasma.
 
 ### Dark theme
 ![dark theme](./dark.png)
+
+### Dracula theme
+![dracula theme](./dracula.png)
