@@ -1,0 +1,152 @@
+/*
+ * breeze-dracula.rasi
+ * rofi theme inspired by plasma breeze
+ * MonsieurBedard
+ * Dracula colors by Trollwut <trollwut@trollwut.org>
+ */
+
+configuration {
+    columns: 1;
+    font: "Noto Sans 12";
+    sidebar-mode: true;
+    show-icons: true;
+    terminal: "kitty";
+    drun-match-fields: "name,generic,exec,categories";
+    levenshtein-sort: true;
+    matching: "fuzzy";
+}
+
+* {
+    /* Base */
+    default-background: rgba(40, 42, 54, 80%); // <- change this for transparency
+    default-foreground: rgba(248, 248, 242, 100%);
+    default-border: rgba(189, 147, 249, 100%);
+    alternative-background: rgba(40, 42, 54, 100%);
+    invisible: rgba(0, 0, 0, 0%);
+
+    /* Colors */
+    hard-blue: rgba(154, 237, 254, 100%);
+    light-blue: rgba(139, 233, 253, 100%);
+
+    hard-red: rgba(255, 110, 103, 100%);
+    light-red: rgba(255, 85, 85, 100%);
+
+    hard-green: rgba(90, 247, 142, 100%);
+    light-green: rgba(80, 250, 123, 100%);
+
+    pink: rgba(255, 121, 198, 100%);
+
+    /* Universal */
+    background-color: @invisible;
+    border-color: @default-border;
+    /*font: "Noto Sans 10";*/
+    text-color: @default-foreground;
+}
+
+#window {
+    background-color: @default-background;
+    border: 1;
+    border-radius: 3;
+    border-color: @default-border;
+    padding: 7;
+}
+
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+
+#message {
+    border: 1;
+    border-radius: 3;
+    padding: 5;
+    background-color: @alternative-background;
+}
+
+#textbox {
+    background-color: @entry-background;
+}
+
+#listview {
+    fixed-height: 0;
+    spacing: 2;
+    scrollbar: false;
+    padding: 2 0 0;
+}
+
+#element {
+    padding: 5;
+    border: 1;
+    border-radius: 3;
+    border-color: @invisible;
+}
+
+#element.normal.normal {
+    background-color: @invisible;
+}
+
+#element.normal.urgent {
+    background-color: @light-red;
+}
+
+#element.normal.active {
+    /*background-color: @light-green;*/
+    border-color:     @hard-green;
+}
+
+#element.selected.normal {
+    background-color: @light-blue;
+    border-color:     @hard-blue;
+    color:            @alternative-background;
+}
+
+#element.selected.urgent {
+    background-color: @light-red;
+    border-color:     @hard-red;
+}
+
+#element.selected.active {
+    background-color: @light-green;
+    border-color:     @hard-green;
+    color:            @alternative-background;
+}
+
+#mode-switcher {
+    spacing: 0;
+}
+
+#button {
+    border: 0 0 3 0;
+    border-color: @invisible;
+    padding: 3;
+}
+
+#button.selected {
+    border-color: @pink;
+}
+
+#inputbar {
+    spacing: 0;
+    padding: 1;
+}
+
+#case-indicator {
+    spacing: 0;
+    padding: 3px;
+    background-color: @alternative-background;
+    border: 1 1 1 0;
+    border-radius: 0 2 2 0;
+}
+
+#entry {
+    background-color: @alternative-background;
+    padding: 3px;
+    border: 1 0 1 1;
+    border-radius: 2 0 0 2;
+}
+
+#prompt {
+    padding: 3 7 3 0;
+}
+
+/* vim:ft=css
