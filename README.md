@@ -9,3 +9,6 @@ A rofi theme inspired by breeze from kde plasma.
 
 ### Dracula theme
 ![dracula theme](./dracula.png)
+
+### Arc Light theme
+![arc-light theme](./arc-light.png)
