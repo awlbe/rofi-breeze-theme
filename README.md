@@ -12,3 +12,6 @@ A rofi theme inspired by breeze from kde plasma.
 
 ### Arc Light theme
 ![arc-light theme](./arc-light.png)
+
+### Arc Dark theme
+![arc-dark theme](./arc-dark.png)
