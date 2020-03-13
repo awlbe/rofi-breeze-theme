@@ -15,3 +15,6 @@ A rofi theme inspired by breeze from kde plasma.
 
 ### Arc Dark theme
 ![arc-dark theme](./arc-dark.png)
+
+### Materia Manjaro Dark theme
+![materia-manjaro-dark-theme](./materia-manjaro-dark.png)
